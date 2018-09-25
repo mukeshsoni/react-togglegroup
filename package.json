@@ -1,0 +1,27 @@
+{
+  "name": "react-togglegroup",
+  "version": "1.0.0",
+  "description": "Component to abstract toggling on/off states of group of items",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukeshsoni/react-togglegroup.git"
+  },
+  "keywords": [
+    "react",
+    "render-prop",
+    "toggle",
+    "group",
+    "radio",
+    "checkbox"
+  ],
+  "author": "Mukesh Soni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mukeshsoni/react-togglegroup/issues"
+  },
+  "homepage": "https://github.com/mukeshsoni/react-togglegroup#readme"
+}
