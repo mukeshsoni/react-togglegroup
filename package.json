@@ -2,8 +2,13 @@
   "name": "react-togglegroup",
   "version": "1.0.0",
   "description": "Component to abstract toggling on/off states of group of items",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,6 +17,7 @@
   },
   "keywords": [
     "react",
+    "react-component",
     "render-prop",
     "toggle",
     "group",
@@ -23,5 +29,12 @@
   "bugs": {
     "url": "https://github.com/mukeshsoni/react-togglegroup/issues"
   },
-  "homepage": "https://github.com/mukeshsoni/react-togglegroup#readme"
+  "homepage": "https://github.com/mukeshsoni/react-togglegroup#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.18",
+    "prop-types": "^15.6.2"
+  }
 }

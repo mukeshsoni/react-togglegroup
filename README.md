@@ -4,6 +4,8 @@ This component abstracts maintaining boolean state for a list of items. One can 
 
 It's built as a render-prop component. The on/off state for each of the items can be asked using the `isOn` function passed as argument to `children` function prop.
 
+Checkout some use cases here - https://codesandbox.io/s/24mv09yp90
+
 E.g. This is how a Radiogroup can be implemented using `react-togglegroup`
 
 ```

@@ -1,18 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class ToggleGroup extends React.Component {
-  static defaultProps = { single: true };
-  state = { on: [] };
-
   constructor(props) {
     super(props);
 
     this.state = {
       on: props.defaultOn ? props.defaultOn : []
     };
+    this.toggle = this.toggle.bind(this);
+    this.isOn = this.isOn.bind(this);
   }
 
-  toggle = index => {
+  toggle(index) {
     const { single } = this.props;
 
     this.setState(({ on }) => {
@@ -26,11 +26,17 @@ class ToggleGroup extends React.Component {
         };
       }
     });
-  };
+  }
 
-  isOn = index => this.state.on.includes(index);
+  isOn(index) {
+    this.state.on.includes(index);
+  }
 
   render() {
+    if (typeof this.props.children !== 'function') {
+      throw new Error('react-togglegroup needs children, or children prop, as a function');
+    }
+
     return this.props.children({
       ...this.state,
       toggle: this.toggle,
@@ -38,5 +44,13 @@ class ToggleGroup extends React.Component {
     });
   }
 }
+
+ToggleGroup.propTypes = {
+  children: PropTypes.func.isRequired,
+  single: PropTypes.bool,
+  defaultOn: PropTypes.bool
+};
+
+ToggleGroup.defaultProps = { single: true };
 
 export default ToggleGroup;
