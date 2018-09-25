@@ -1,6 +1,6 @@
 {
   "name": "react-togglegroup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Component to abstract toggling on/off states of group of items",
   "main": "lib/index.js",
   "files": [
