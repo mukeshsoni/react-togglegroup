@@ -34,3 +34,30 @@ class RadioGroup extends React.PureComponent {
   }
 }
 ```
+
+How to install `react-togglegroup`?
+
+On your command line, type
+
+```
+npm install react-togglegroup --save
+```
+
+or, if you use yarn for installing dependencies, type
+
+```
+yarn add react-togglegroup
+```
+
+And in your react component -
+
+```
+import ToggleGroup from 'react-togglegroup'
+
+// in your jsx somewhere
+<ToggleGroup>
+  {({isOn, toggle}) => {
+    // your components
+  }}
+</ToggleGroup>
+```
